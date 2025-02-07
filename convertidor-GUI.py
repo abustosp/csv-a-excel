@@ -1,6 +1,6 @@
 import tkinter as tk
 import tkinter.ttk as ttk
-import BIN.convertidor as convertidor
+import bin.convertidor as convertidor
 
 def cafecito():
     import webbrowser
@@ -23,14 +23,17 @@ class ConvertidorApp:
             cursor="arrow",
             height=250,
             width=325)
-        Toplevel_1.iconbitmap("BIN/ABP-blanco-en-fondo-negro.ico")
+        try:
+            Toplevel_1.iconbitmap("bin/ABP-blanco-en-fondo-negro.ico")
+        except:
+            pass
         Toplevel_1.minsize(280, 440)
         Toplevel_1.overrideredirect("False")
         Toplevel_1.resizable(False, False)
         Toplevel_1.title("Convertidor de CSV")
         Label_3 = ttk.Label(Toplevel_1)
         self.img_ABPblanco = tk.PhotoImage(
-            file="BIN/ABP-blanco-sin-fondo.png")
+            file="bin/ABP-blanco-sin-fondo.png")
         Label_3.configure(
             background="#2e2e2e",
             image=self.img_ABPblanco)
